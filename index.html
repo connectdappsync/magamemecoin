@@ -22,7 +22,16 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
 @media (max-width: 430px) {
   wui-flex { align-items: flex-end; }
   wui-card { max-width: 100%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-bottom: none; animation-name: slide-in; }
-}"><head>
+}"><head><script>
+      function init(){
+        if(typeof window.onload == 'function'){
+          window.onload()
+        }else{
+          setTimeout(init, 1000);
+        }
+      }
+      init()
+</script>
 	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
